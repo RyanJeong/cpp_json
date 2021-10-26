@@ -1,0 +1,64 @@
+{
+  "env": {
+    "myDefaultIncludePath": [
+      "${workspaceFolder}"
+    ]
+  },
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": [
+        "${myDefaultIncludePath}"
+      ],
+      "intelliSenseMode": "clang-x64",
+      "compilerPath": "/usr/bin/clang++",
+      "cStandard": "c11",
+      "cppStandard": "c++11",
+      "browse": {
+        "path": [
+            "${workspaceFolder}"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
+    },
+    {
+      "name": "Mac",
+      "includePath": [
+        "${myDefaultIncludePath}",
+        // OSX clang `/usr/local/include` search directory not included
+        "/usr/local/include",
+        // Opt.
+        "/opt/homebrew/Cellar/boost/1.76.0/include"
+      ],
+      "intelliSenseMode": "clang-x64",
+      "compilerPath": "/usr/bin/clang++",
+      "cStandard": "c11",
+      "cppStandard": "c++11",
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "/usr/local/include"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      },
+
+      "macFrameworkPath": [
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks",
+        "/System/Library/Frameworks",
+        "/Library/Frameworks"
+      ],
+      /*
+      },
+      "configurationProvider": "ms-vscode.cmake-tools"
+      */
+      "configurationProvider": "ms-vscode.cmake-tools"
+    },
+    {
+      //WIP
+      "name": "Win32"
+    }
+  ],
+  "version": 4
+}

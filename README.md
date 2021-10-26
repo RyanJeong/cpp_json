@@ -8,4 +8,6 @@ $ cd third_party
 $ git submodule add https://github.com/nlohmann/json
 
 $ git diff --cached json
+
+$ git submodule update --init --recursive
 ```
