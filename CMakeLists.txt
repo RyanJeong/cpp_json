@@ -1,4 +1,20 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(cpp_json VERSION 0.1.0)
+cmake_minimum_required (VERSION 3.13)
 
-add_executable(cpp_json main.cpp)
+# version info.
+set(CPP_JSON_VERSION_MAJOR 0)
+set(CPP_JSON_VERSION_MINOR 0)
+set(CPP_JSON_VERSION_PATCH 0)
+set(CPP_JSON_VERSION ${CPP_JSON_VERSION_MAJOR}.${CPP_JSON_VERSION_MINOR}.${CPP_JSON_VERSION_PATCH})
+
+project(cpp_json)
+message("Version = ${CPP_JSON_VERSION}")
+
+# specify the C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_C_COMPILER_FORCED TRUE)
+
+# Core source directory
+add_subdirectory(app)
