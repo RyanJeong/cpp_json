@@ -43,16 +43,12 @@
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
       },
-
+      // Only supported on configurations for macOS.
       "macFrameworkPath": [
         "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks",
         "/System/Library/Frameworks",
         "/Library/Frameworks"
       ],
-      /*
-      },
-      "configurationProvider": "ms-vscode.cmake-tools"
-      */
       "configurationProvider": "ms-vscode.cmake-tools"
     },
     {

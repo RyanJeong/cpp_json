@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "clang++ - Build and debug",
+            "name": "clang++ - Build and debug for Linux",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/${command:cmake.buildType}/client/sense-backend-client",
@@ -12,31 +12,23 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb",
-            //MAC
-            //"MIMode": "lldb",
             "preLaunchTask": "make build",
+            "miDebuggerPath": "/usr/bin/gdb",
             "additionalSOLibSearchPath": "${workspaceFolder}/build/${command:cmake.buildType}/core;/lib64;/usr/lib",
-            // "internalConsoleOptions": "openOnSessionStart",
           },
          {
             "name": "clang++ - Build and debug for Mac",
-            //"type": "cppdbg",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/build/${command:cmake.buildType}/client/sense-backend-client",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            //"MIMode": "gdb",
-            //"miDebuggerPath": "/usr/bin/gdb",
-            //MAC
             "MIMode": "lldb",
             "preLaunchTask": "make build",
             "additionalSOLibSearchPath": "${workspaceFolder}/build/${command:cmake.buildType}/core;/lib64;/usr/lib",
-            // "internalConsoleOptions": "openOnSessionStart",
           }       
     ]
 }
