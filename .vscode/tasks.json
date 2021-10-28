@@ -24,7 +24,11 @@
         "cwd": "${workspaceRoot}/build/${command:cmake.buildType}"
       },
       "command": "cmake",
-      "args": ["-DCMAKE_BUILD_TYPE=${command:cmake.buildType}", "${workspaceFolder}", "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/default-toolchain.cmake"],
+      "args": [
+        "-DCMAKE_BUILD_TYPE=${command:cmake.buildType}", 
+        "${workspaceFolder}", 
+        "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/default-toolchain.cmake"
+      ],
       "dependsOn": ["Create Build dir"],
       "problemMatcher": [],
       "group": "build",
