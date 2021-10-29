@@ -23,7 +23,25 @@ int main() {
   first_class_data_type(false);
   serialization_deserialization(false);
   stl_like_accesS(false);
-  conversion_from_stl_containers(true);
+  conversion_from_stl_containers(false);
+
+  std::vector<std::string> v;
+  v.push_back("1.0.0");
+  v.push_back("1.0.1");
+  json j = {
+    {"version", v}
+  };
+  std::cout << j.dump() << std::endl;
+
+  std::vector<std::string> tmp;
+  json t = j.at("version");
+  for (const auto& u : t) {
+    tmp.push_back(u);
+  }
+  for (const auto& i : tmp) {
+    std::cout << i << ' ';
+  }
+  std::cout << std::endl;
 
   return 0;
 }
